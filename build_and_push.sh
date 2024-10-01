@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Define variables
 IMAGE_NAME="vindog/da-test"

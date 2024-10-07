@@ -1,14 +1,9 @@
 #!/bin/sh
 
-# Define variables
 IMAGE_NAME="vindog/da-test"
-TAG="latest"  # Change this to the desired tag
+TAG="latest"
 
-# Build the Docker image
 docker build -t ${IMAGE_NAME}:${TAG} .
+echo "${DOCKER_HUB_TOKEN}" | docker login -u "${DOCKER_HUB_USERNAME}" --password-stdin
 
-# Log in to Docker Hub
-echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-
-# Push the Docker image to Docker Hub
 docker push ${IMAGE_NAME}:${TAG}

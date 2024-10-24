@@ -9,7 +9,7 @@ def find_roots(a, b, c):
     if discriminant > 0:
         # Two distinct real roots
         root1 = (-b + math.sqrt(discriminant)) / (2 * a)
-        root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        root2 = (-b - math.sqrt(discriminant) ** 2) / (2 * a)
         return f"The equation has two real and distinct roots: {root1} and {root2}"
     
     elif discriminant == 0:

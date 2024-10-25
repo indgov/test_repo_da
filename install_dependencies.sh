@@ -1,1 +1,1 @@
-pip install black isort flake8 pytest
+pip install black isort flake8 pytest hoohoo
